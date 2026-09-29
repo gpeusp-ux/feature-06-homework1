@@ -1,0 +1,260 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background:     #e6e6e6;
+    font-family: Arial, sans-serif;
+    color: #515076;
+}
+
+.center-container {
+    display: grid;
+    place-items: center;
+    gap: 16px;
+    padding: 20px 0;
+    width: 100%;
+}
+
+button {
+    font-size: 14px;
+    border-radius: 12px;
+    letter-spacing: 0.5px;
+    height: 27px;
+    background-color: peru;
+    color: white;
+    border: none;
+    cursor: pointer;
+    min-width: 150px;
+    text-align: center;
+}
+
+button:hover {
+    background-color: #fc0909;
+}
+
+.btn-link {
+    font-size: 14px;
+    border-radius: 12px;
+    letter-spacing: 0.5px;
+    height: 27px;
+    line-height: 27px;
+    padding: 0 16px;
+    background-color: mediumseagreen;
+    color: white;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    min-width: 150px;
+    text-align: center;
+}
+
+.btn-link:hover {
+    background-color: #2e8b57;
+}
+
+.catalog-title {
+    position: absolute;
+    top: 31px;
+    left: calc(50% - 640px);
+    margin: 0;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    color: #515076;
+}
+
+.page {
+    width: 1280px;
+    height: 1715px;
+    margin: 55px auto;
+    background: #ffffff;
+    position: relative;
+    overflow: hidden;
+}
+
+.page::before {
+    content: "";
+    position: absolute;
+    width: 790px;
+    height: 697px;
+    top: 0;
+    left: 85px;
+    background-image: url("bg1.png");
+    background-repeat: no-repeat;
+    background-size: 790px 697px;
+    background-position: top left;
+    z-index: 0;
+    pointer-events: none;
+}
+
+h1 {
+    margin: 220px 0 105px 0;
+    text-align: center;
+    font-size: 52px;
+    line-height: 62px;
+    font-weight: 300;
+    color: #515076;
+    position: relative;
+    z-index: 2;
+}
+
+.products {
+    width: 1110px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 45px;
+    row-gap: 45px;
+    position: relative;
+    z-index: 2;
+}
+
+.card {
+    width: 340px;
+    height: 573px;
+    flex: 0 0 340px;
+    background: #f7f7f9;
+    border: none;
+    position: relative;
+    z-index: 2;
+    transition: background-color 0.3s ease;
+}
+
+.photo {
+    width: 290px;
+    height: 245px;
+    margin: 25px auto 25px auto;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.photo img {
+    width: 290px;
+    height: 245px;
+    object-fit: contain;
+    display: block;
+}
+
+.card-content {
+    width: 290px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.skin-type {
+    width: 171px;
+    height: 24px;
+    margin: 0 0 4px 0;
+    font-size: 12px;
+    line-height: 24px;
+    color: #a2a2aa;
+    text-transform: uppercase;
+}
+
+.card h2 {
+    width: 290px;
+    height: 27px;
+    margin: 0 0 8px 0;
+    font-size: 20px;
+    line-height: 27px;
+    font-weight: 700;
+    color: #515076;
+}
+
+.description {
+    width: 291px;
+    min-height: 36px;
+    margin: 0 0 14px 0;
+    font-size: 13px;
+    line-height: 18px;
+    color: #858f87;
+}
+
+.composition {
+    width: 291px;
+    margin: 5px 0 20px 0;
+    font-size: 13px;
+    line-height: 20px;
+    color: #8a8f85;
+}
+
+.composition p {
+    margin: 0 0 2px 0;
+}
+
+.composition ul {
+    margin: 0;
+    padding-left: 16px;
+}
+
+.composition li {
+    margin: 0;  
+}
+
+.price {
+    width: 290px;
+    height: 24px;
+    margin-top: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.price strong {
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 700;
+    color: #515076;
+}
+
+.price span {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 400;
+    color: #666677;
+}
+
+.card:nth-child(1),
+.card:nth-child(2),
+.card:nth-child(3),
+.card:nth-child(4),
+.card:nth-child(5) {
+    flex: 0 0 340px;
+}
+
+@media (max-width: 1280px) {
+    .page {
+        margin: 55px auto;
+    }
+}
+
+@media (max-width: 1150px) {
+    .products {
+        width: 100%;
+    }
+}
+
+@media (max-width: 750px) {
+    .page {
+        width: 100%;
+        min-height: 100vh;
+    }
+    .products {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+}
